@@ -4,4 +4,4 @@
 
 ## `ЭТАП 1` Ознакомительный этап
 
-* [Task1. Камни](https://github.com/GrbnvAlex/allcups-itonecup-systemanalysis/blob/main/1%20этап.%20Ознакомительный%20раунд/Task%201.%20Камни.md)
+* [Task 1. Камни](https://github.com/GrbnvAlex/allcups-itonecup-systemanalysis/blob/main/1%20этап.%20Ознакомительный%20раунд/Task%201.%20Камни.md)
