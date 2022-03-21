@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Message" 		type="MessageType"/>
+	
+	<xs:complexType name="MessageType">
+		<xs:all>
+			<xs:element name="Agent" 		type="AgentType"/>
+			<xs:element name="Subject" 		type="xs:string"/>
+			<xs:element name="PostalFee" 	type="xs:positiveInteger"/>
+			<xs:element name="Region" 		type="RegionType"/>
+			<xs:element name="MessageCode" 	type="xs:positiveInteger"/>
+			<xs:element name="Urgent" 		type="xs:boolean" minOccurs="0"/>
+			<xs:element name="Comment" 		type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+	
+	<xs:simpleType name="AgentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Sir Andrew Levins"/>
+			<xs:enumeration value="Amanda Smith"/>
+			<xs:enumeration value="Faceless Edward"/>
+			<xs:enumeration value="Sir Richard Johnson"/>
+			<xs:enumeration value="Nickole"/>
+			<xs:enumeration value="Amanda Smith"/>
+			<xs:enumeration value="Frederick Pauls"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="RegionType">
+		<xs:choice>
+			<xs:element name="Kingdom" 		type="RegionEnumerationType"/>
+			<xs:element name="Village" 		type="RegionEnumerationType"/>
+			<xs:element name="Town" 		type="RegionEnumerationType"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:simpleType name="RegionEnumerationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Mountain Hills"/>
+			<xs:enumeration value="Shining Rocks"/>
+			<xs:enumeration value="Iris Lake"/>
+			<xs:enumeration value="Thornwille"/>
+			<xs:enumeration value="Stillville"/>
+			<xs:enumeration value="RichWoods"/>
+			<xs:enumeration value="ColdLakes"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
