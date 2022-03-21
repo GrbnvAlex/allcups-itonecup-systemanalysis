@@ -2,8 +2,8 @@
 	"gems" : [
 		{"Pearl" : {"GodsBlessed" : ["Zeus"]}},
 		{"Ruby" : {"GodsBlessed" : ["Zeus", "Gefest"]}},
-		{"Berill" : {"GodsBlessed" : ["Aid", "Gefest"], "Necromancy" : true}}, 
-		{"Emerald" : {"GodsBlessed" : ["Aid", "Zeus"], "Necromancy" : true}}, 
+		{"Berill" : {"GodsBlessed" : ["Aid", "Gefest"], "Necromancy" : true }}, 
+		{"Emerald" : {"GodsBlessed" : ["Aid", "Zeus"], "Necromancy" : true }}, 
 		{"Amethyst" : {"GodsBlessed" : ["Aid"]}}, 
 		{"Sapphire" : {"GodsBlessed" : ["Gefest"]}},
 		{"Amber" : {"GodsBlessed" : ["Zeus"]}},
