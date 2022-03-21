@@ -1,74 +1,263 @@
 # Условия
 
-Вы находитесь в фентезийном мире, в котором идет великое противостояние между магами трех гильдий, каждая из которых находится под покровительством одного из великих и могучих богов: Зевса, Аида и Гефеста. Каждый из этих богов, в обмен на благословение и поддержку, требует выполнения определенных условий, а за нарушения - жестоко карает.
+Вы - распорядитель Главной Королевской Почты, в ваше ведомство поступают сообщения особой важности от агентов, и разведчиков, которые содержат разведданные и другие полезные сведения, которые используются при принятии решений в королевстве.
 
-Вы - молодой маг, который только что закончил академию и находится в раздумьях, примкнуть ли к одной из гильдий или остаться на стороне собственной правды. За долгие годы обучения вы собрали набор из девяти магических камней, каждый из которых может усилить одно или несколько ваших умений или характеристик, но, что важнее всего - каждый камень даст вам некоторое количество очков Силы. Вы будете вставлять камни в свою магическую диадему, указывая, какие характеристики каждого камня вы будете использовать.
+Однако в последнее время участились случаи, когда в ваше ведомство попадают ложные донесения от врагов, выдающих себя за агентов. Из-за таких донесений королевство принимает неверные решения, а там, глядишь, и до войны недалеко!
 
-**Ваша задача - собрать максимальное количество очков Силы.**
+Работникам вашего ведомства удалось выбрать несколько сообщений, о которых доподлинно известно, что они были присланы вашими агентами и еще несколько сообщений, которые присланы, скорее всего, врагами. Ваша задача - тщательно их проанализировать, найти закономерности и разработать набор правил, по которым можно было бы определять, можно верить сообщению или нет.
 
-Для этого вы должны выбрать из списка камни и для каждого камня указать характеристики, которые вам необходимы. Вы можете использовать любое количество камней (хоть все) и любые их характеристики, главное - правильно составить заклинание. За каждый камень вы получите столько очков Силы, сколько указано в его описании.
+Вашу работу будут оценивать очень строго: За каждое настоящее сообщение, которое пройдет проверку по вашим правилам, вы будете получать 3 балла, а за каждое ложное сообщение, которому удастся обмануть ваши правила, вас будут штрафовать на 2 балла.
+Чем больше правильных сообщений пройдет проверку и чем меньше ложных не пройдет, тем лучше!
 
-Вот эти камни:
+Для удобства работы с сообщениями они были представлены в виде xml сообщений, а правила проверки подлинности должны быть оформлены в виде xsd схемы, по которой эти сообщения будут проверяться.
 
-| Камень      | Прирост физ. силы | Боги, которые признают этот камень | Некромантия | Оружие, которое получит дополнительный урон | Расход магической маны | Прирост интеллекта | Будут усилены навыки | Количество очков Силы |
-| ---         | --- | --- |  --- |  --- |  --- |  --- |  --- |  --- | 
-| `Жемчуг`    | 200 | Зевс | Может быть использована | Копье | 10 | 50 | Яростный удар, Исцеление | 2 |
-| `Рубин`     | 350 | Зевс, Гефест | Может быть использована | Молот, Копье | 50 | 150 | Шепот ночи, Исцеление | 3 |
-| `Берилл`    | 250 | Аид, Гефест | Обязательно будет использована | Молот, Топор | 0 | 30 | Яростный удар, Шепот Ночи, Исцеление | 4 |
-| `Изумруд`   | 100 | Аид, Зевс | Обязательно будет использована | Нет | 0 | 100 | Яростный удар, Исцеление | 2 |
-| `Аметист`   | 250 | Аид | Может быть использована | Меч, Молот | 0 | 0 | Яростный удар | 3 |
-| `Сапфир`    | 100 | Гефест | Нет | Молот | 100 | 50 | Шепот ночи | 1 |
-| `Янтарь`    | 50 | Зевс | Нет | Копье | 150 | 150 | Шепот ночи, Исцеление | 1 |
-| `Алмаз`     | 100 | Гефест | Может быть использована | Копье, Топор | 0 | 200 | Яростный удар, Исцеление | 1 |
-| `Оникс`     | 150 | Зевс, Аид, Гефест | Может быть использована | Молот, Топор | 0 | 100 | Яростный удар, Шепот ночи | 3 |
+## Набор подлинных сообщений
 
-Но прежде чем опрометчиво добавить себе все камни в диадему, вам следует знать вот что: каждый из богов не только велик и могуч, но еще и невероятно ревнив и хочет, чтобы маги в его гильдии использовали только те камни, которые признаются этим богом. Кроме того, каждый бог накладывает ограничения на использование того или иного свойства камня. В качестве награды за поклонение и выполнение условий, бог удваивает очки Силы, которые дадут камни. Но если вы попытаетесь обмануть бога, вы получите проклятье и очки вашей Силы уменьшатся в два раза.
-
-Испытывать волю богов или нет - ваше решение: в своем финальном заклинании вы должны будете сделать выбор, хотите ли вы попытаться получить благословение какого-либо из богов или нет. Если соблюдены условия одного из богов, он сам откликнется и дарует вам благословение, упоминать имена богов в заклинании - плохая примета.
-
-Вот условия богов:
-
-| Бог | Условия |
-| --- | --- |
-| `Зевс` | ➜  Запрещает использовать некромантию <br> ➜  Запрещает усиливать какие-либо навыки |
-| `Аид` | ➜ Запрещает увеличивать физическую силу <br> ➜  Требует использовать некромантию <br> ➜  Запрещает усиливать какое-либо оружие <br> ➜  Запрещает любое вмешательство в расход магической маны |
-| `Гефест` | ➜  Запрещает использовать некромантию <br> ➜  Запрещает увеличивать интеллект |
-
-Пришло время действий! Изучите свойства камней, количество очков Силы, которые они дают, определите, хотите ли вы получить чье-либо благословение или пользоваться только той Силой, что дают вам камни, и сформируйте заклинание, которое необходимо будет произнести.
-
-# Как оформить решение
-
-**Решением задачи (“итоговым заклинанием”) будет json файл, который вам необходимо создать и загрузить на сервер для проверки. Json файл должен содержать два основных атрибута:**
-
-* Массив `gems`, в котором в качестве элементов должны быть перечислены объекты - камни, которые вы хотите использовать.
-* Логический атрибут `CheckBlessing`, который должен иметь значение `true`, если вы хотите попытаться удвоить очки Силы. Если собираете камни без проверки благословения, этот атрибут можно не указывать.
-
-**Каждый камень - это объект, который содержит название и те атрибуты, которые вы хотите использовать**. Для указания названий камней в Json используются следующие их англоязычные наименования, регистр важен (приведены в том же порядке, в котором перечислены в задании):
-
-```
-"Pearl", "Ruby", "Berill", "Emerald", "Amethyst", "Sapphire", "Amber", "Diamond", "Onyx"
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Sir Andrew Levins</Agent>
+        <Subject>North is under control</Subject>
+        <PostalFee>80</PostalFee>
+        <Region>
+                <Kingdom>Mountain Hills</Kingdom>
+        </Region>
+        <Urgent>true</Urgent>
+        <MessageCode>2</MessageCode>
+        <Comment>Dear Queen! north of the kingdom is under conrtol.</Comment>
+</Message>
 ```
 
-Пример:
-
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Amanda Smith</Agent>
+        <Subject>New gold minery established</Subject>
+        <PostalFee>120</PostalFee>
+        <Region>
+                <Village>Shining Rocks</Village>
+        </Region>
+        <MessageCode>4</MessageCode>
+        <Comment>Your Magesty! New gold minery was established at the
+Shining Rocks village.</Comment>
+</Message>
 ```
-"Onyx" : {
-...
-}
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Faceless Edward</Agent>
+        <Subject>No news from the Iris Lake</Subject>
+           <PostalFee>95</PostalFee>
+        <Region>
+                <Kingdom>Iris Lake</Kingdom>
+        </Region>
+        <MessageCode>7</MessageCode>
+        <Urgent>false</Urgent>
+        <Comment>Greetings, my Queen! No news is good news.</Comment>
+</Message>
 ```
 
-Для атрибутов камней должны использоваться следующие названия:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Sir Richard Johnson</Agent>
+        <Subject>People unhappy</Subject>
+        <PostalFee>90</PostalFee>
+        <Region>
+                <Town>Thornwille</Town>
+        </Region>
+        <MessageCode>9</MessageCode>
+        <Urgent>true</Urgent>
+        <Comment>My Queen! Your attention needed to people of
+Thornwille.</Comment>
+</Message>
+```
 
-| Атрибут | Название | Тип | Ограничения |
-| --- | --- | --- | --- |
-| Прирост физической силы | `STR` | Number | - |
-| Боги, которые признают этот камень | `GodsBlessed` | Array | Допустимые значения: <br> `"Zeus"` <br> `"Aid"` <br> `"Gefest"` |
-| Некромантия | `Necromancy` | Boolean | - |
-| Оружие, которое получит дополнительный урон | `Weapons` | Array | Допустимые значения: <br> `"Spear"` (копье) <br> `"Axe"` (топор) <br> `"Sword"` (меч) <br> `"Hummer"` (молот) |
-| Расход магической маны | `Mana` | Number | - |
-| Прирост интеллекта | `INT` | Number | - | 
-| Будут усилены навыки | `Skills` | Array | Допустимые значения: <br> `"Furious Strike"` (Яростный удар) <br> `"Night Whisper"` (Шепот ночи) <br> `"Healing"` (Лечение) |
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Sir Andrew Levins</Agent>
+        <Subject>Something strange at the North-East</Subject>
+        <PostalFee>100</PostalFee>
+        <Region>
+                <Kingdom>Mountain Hills</Kingdom>
+        </Region>
+        <MessageCode>4</MessageCode>
+        <Urgent>true</Urgent>
+        <Comment>Deer Queen! I recommend you to arrange scout squad to
+reveal activities at this Region.</Comment>
+</Message>
+```
 
-**При описании каждого камня вы должны перечислить те атрибуты, которые хотите добавить**. Если атрибут добавлен, то его значение должно точно соответствовать указанному в описании камня, например, если для Оникса указано, что прирост физической силы = 150, значит в описании камня Onyx соответствующий атрибут должен иметь значение 150.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Nickole</Agent>
+        <Subject>No news from here</Subject>
+        <PostalFee>80</PostalFee>
+        <Region>
+                <Village>Stillville</Village>
+        </Region>
+        <MessageCode>8</MessageCode>
+        <Comment>My Queen! Everything is still in Stillville.</Comment>
+</Message>
+```
 
-**Обязательным атрибутом для всех камней является только список богов, которые признают этот камень**. Однако, для некоторых камней могут быть указаны и другие обязательные атрибуты (об этом явно сказано в описании камня). Элементы массивов можно приводить в любом порядке, регистр важен.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Amanda Smith</Agent>
+        <Subject>Gold mining increased</Subject>
+        <PostalFee>90</PostalFee>
+        <Region>
+                <Village>RichWoods</Village>
+        </Region>
+        <MessageCode>6</MessageCode>
+        <Urgent>false</Urgent>
+        <Comment>My Queen! Good news for you, our gold vallets would be
+fullfilled soon.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Frederick Pauls</Agent>
+        <Subject>Half-Face King is planning attack!</Subject>
+        <PostalFee>100</PostalFee>
+        <Region>
+                <Kingdom>ColdLakes</Kingdom>
+        </Region>
+        <MessageCode>4</MessageCode>
+        <Urgent>true</Urgent>
+        <Comment>Your Magesty! We need to defend our east.</Comment>
+</Message>
+```
+
+## Набор ложных сообщений
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Sir Peter Norton</Agent>
+        <Subject>North is getting dangerous</Subject>
+        <PostalFee>150</PostalFee>
+        <Region>
+                <Kingdom>Mountain Hills</Kingdom>
+        </Region>
+        <MessageCode>7</MessageCode>
+        <Urgent>true</Urgent>
+        <Comment>Dear Queen! north of the kingdom is getting dangerous!</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Miranda Smith</Agent>
+        <Subject>New gold minery exploded</Subject>
+        <PostalFee>120</PostalFee>
+        <Region>
+                   <City>Sparkling Castle</City>
+        </Region>
+        <MessageCode>9</MessageCode>
+        <Comment>Your Magesty! We need additional supply, our midery
+dosn't work any more.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Faceless Edward</Agent>
+        <Subject>No news from the Beawers Lake</Subject>
+        <PostalFee>0</PostalFee>
+        <Region>
+                <Kingdom>Iris Lake</Kingdom>
+        </Region>
+        <MessageCode>16</MessageCode>
+        <Comment>Greetings, my Queen! No news from Beawers Lake.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Sir Richard Johnson</Agent>
+        <Subject>People are happy</Subject>
+        <PostalFee>90</PostalFee>
+        <Region>
+                <Town>Thornwille</Town>
+        </Region>
+        <MessageCode>9</MessageCode>
+        <Urgent>no</Urgent>
+        <Comment>My Queen! Your attention is not needed here.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Sir Andrew Levins</Agent>
+        <Subject>Something strange at the North-West</Subject>
+        <Region>
+                <Kingdom>Mountain Hills</Kingdom>
+        </Region>
+        <MessageCode>4</MessageCode>
+        <Urgent>true</Urgent>
+        <Comment>Deer Queen! I recommend you to arrange scout squad to
+reveal activities at this Region.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Nickole</Agent>
+        <Subject>No news from here</Subject>
+
+<PostalFee>80</PostalFee>
+        <Village>Stillville</Village>
+        <MessageCode>8</MessageCode>
+        <Comment>My Queen! Everything is still in Stillville.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Amanda Smith</Agent>
+        <Subject>Gold mining decreased</Subject>
+        <PostalFee>90</PostalFee>
+        <Region>
+                <Village>RichWoods</Village>
+        </Region>
+        <MessageCode>6</MessageCode>
+        <Urgent>false</Urgent>
+        <Code>4</Code>
+        <Comment>My Queen! Bad news for you, our gold vallets would be
+empty soon.</Comment>
+</Message>
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+        <Agent>Frederick Pauls</Agent>
+        <Subject>Red King is planning attack!</Subject>
+        <PostalFee>100</PostalFee>
+        <Region>
+                <Kingdom>ColdLakes</Kingdom>
+        </Region>
+        <MessageCode>4</MessageCode>
+        <Urgent>true</Urgent>
+        <Comment>We need to attack Red King first.</Comment>
+</Message>
+```
+
+## Как оформить решение
+
+В задании приведено два набора по 8 xml сообщений.
+
+Вам необходимо сформировать и загрузить на сервер xsd схему, по которой будут проверяться все сообщения по очереди. Схема должна быть составлена таким образом, чтобы как можно больше сообщений из первого блока проходили проверку по ней и как можно больше сообщений из второго блока - не проходили.
