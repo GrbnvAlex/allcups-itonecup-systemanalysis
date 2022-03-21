@@ -1,0 +1,85 @@
+{
+	"gems" : [
+		{"Pearl" : {
+			"STR" : 200,
+			"GodsBlessed" : ["Zeus"],
+			"Necromancy" : true,
+			"Weapons" : ["Spear"],
+			"Mana" : 10,
+			"INT" : 50,
+			"Skills" : ["Furious Strike", "Healing"]
+		}},
+		{"Ruby" : {
+			"STR" : 350,
+			"GodsBlessed" : ["Zeus", "Gefest"],
+			"Necromancy" : true,
+			"Weapons" : ["Hummer", "Spear"],
+			"Mana" : 50,
+			"INT" : 150,
+			"Skills" : ["Night Whisper", "Healing"]
+		}},
+		{"Berill" : {
+			"STR" : 250,
+			"GodsBlessed" : ["Aid", "Gefest"], 
+			"Necromancy" : true,
+			"Weapons" : ["Hummer", "Axe"],
+			"Mana" : 0,
+			"INT" : 30,
+			"Skills" : ["Furious Strike", "Night Whisper", "Healing"]
+		}}, 
+		{"Emerald" : {
+			"STR" : 100,
+			"GodsBlessed" : ["Aid", "Zeus"], 
+			"Necromancy" : true,
+			"Weapons" : [],
+			"Mana" : 0,
+			"INT" : 100,
+			"Skills" : ["Furious Strike", "Healing"]
+		}}, 
+		{"Amethyst" : {
+			"STR" : 250,
+			"GodsBlessed" : ["Aid"],
+			"Necromancy" : true,
+			"Weapons" : ["Sword", "Hummer"],
+			"Mana" : 0,
+			"INT" : 0,
+			"Skills" : ["Furious Strike"]
+		}}, 
+		{"Sapphire" : {
+			"STR" : 100,
+			"GodsBlessed" : ["Gefest"],
+			"Necromancy" : false,
+			"Weapons" : ["Hummer"],
+			"Mana" : 100,
+			"INT" : 50,
+			"Skills" : ["Night Whisper"]
+		}},
+		{"Amber" : {
+			"STR" : 50,
+			"GodsBlessed" : ["Zeus"],
+			"Necromancy" : false,
+			"Weapons" : ["Spear"],
+			"Mana" : 150,
+			"INT" : 150,
+			"Skills" : ["Night Whisper", "Healing"]
+		}},
+		{"Diamond" : {
+			"STR" : 100,
+			"GodsBlessed" : ["Gefest"],
+			"Necromancy" : true,
+			"Weapons" : ["Spear", "Axe"],
+			"Mana" : 0,
+			"INT" : 200,
+			"Skills" : ["Furious Strike", "Healing"]
+		}},
+		{"Onyx" : {
+			"STR" : 150,
+			"GodsBlessed" : ["Zeus", "Aid", "Gefest"],
+			"Necromancy" : true,
+			"Weapons" : ["Hummer", "Axe"],
+			"Mana" : 0,
+			"INT" : 100,
+			"Skills" : ["Furious Strike", "Night Whisper"]
+		}}
+	]
+}
