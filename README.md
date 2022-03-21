@@ -9,6 +9,7 @@
 | Этап | Задание     | Условие | Решение |
 | --- | ---         | --- | --- |
 | `Этап 1. Ознакомительный этап` | `Камни`    | [Условия задачи](https://github.com/GrbnvAlex/allcups-itonecup-systemanalysis/blob/main/Этап%201%20-%20Ознакомительный%20этап/Задание%201%20-%20Камни/README.md) | [Описание решения](https://github.com/GrbnvAlex/allcups-itonecup-systemanalysis/blob/main/Этап%201%20-%20Ознакомительный%20этап/Задание%201%20-%20Камни/Описание%20решения.md) |
+| `Этап 1. Ознакомительный этап` | `Почта` | [Условия задачи](https://github.com/GrbnvAlex/allcups-itonecup-systemanalysis/blob/main/Этап%201%20-%20Ознакомительный%20этап/Задание%202%20-%20Почта/README.md) | [Описание решения](https://github.com/GrbnvAlex/allcups-itonecup-systemanalysis/blob/main/Этап%201%20-%20Ознакомительный%20этап/Задание%202%20-%20Почта/Описание%20решения.md) |
 
 ## `ЭТАП 1` Ознакомительный этап
 
